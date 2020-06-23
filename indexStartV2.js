@@ -21,7 +21,7 @@
     */
 }
 
-// reate a variable called stopWatch
+// create a variable called stopWatch
 
 // Add an event handler to the load event of the window. 
 // Use an anonymous function or an arrow function to
