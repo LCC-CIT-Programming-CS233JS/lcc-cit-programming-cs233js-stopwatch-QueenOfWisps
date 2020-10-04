@@ -13,6 +13,7 @@ function init()
     var startBtn = document.getElementById("start");
     var stopBtn =  document.getElementById("stop"); 
     var resetBtn = document.getElementById("reset");
+   
 
 
 
@@ -38,7 +39,12 @@ function startTimer() {
     if(!isRunning){
         isRunning=true;
         timer= setInterval(incrementTimer,1000);
+        document.getElementById("prog").style="width:33%"
+        
     }
+    
+
+    
 
 
 }
@@ -72,6 +78,8 @@ function stopTimer() {
         isRunning=false; 
         clearInterval(timer);
     }
+    document.getElementById("prog").style="width:66%"
+    
 
 }
 
@@ -86,7 +94,11 @@ function resetTimer() {
  timerTime=0;
  document.getElementById("minutes").innerHTML=pad(0);
  document.getElementById("seconds").innerHTML=pad(0);
+ document.getElementById("prog").style="width:100%"
+ 
 }
+
+
 
 // When the page has finished loading, call the function init
 window.onload = init; //when webpage loads fire init. 
